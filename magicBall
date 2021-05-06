@@ -1,0 +1,38 @@
+import random
+import sys
+
+def main():
+    response = True
+    while response:
+        print("Think of a question to ask the Magic 8 Ball and press enter.")
+        input()
+        randNumber = random.randint(1, 9)
+        print(magicBall(randNumber))
+        print()
+        response = input("Press 'Y' if you have another question or 'N' if you want to quit: ")
+        if response == "N" or response == "n":
+            response = False
+            break
+    print("Goodbye")
+    sys.exit()
+
+
+def magicBall(number):
+    if number == 1:
+        return "Yes"
+    elif number == 2:
+        return "No"
+    elif number == 3:
+        return "Ask again later"
+    elif number == 4:
+        return "Without a Doubt"
+    elif number == 5:
+        return "Outlook not so good"
+    elif number == 6:
+        return "Outlook good"
+    elif number == 7:
+        return "Reply hazy, try again"
+    elif number == 8:
+        return "Cannot predict now"
+    elif number == 9:
+        return "As I see it, yes"
